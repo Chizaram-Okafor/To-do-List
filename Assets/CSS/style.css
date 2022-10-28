@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: rgb(0, 0, 0);
+    --sub-color: rgb(238, 255, 0);
+    --color-text: rgb(255, 255, 255);
+    --font-main: 'Overpass', sans-serif;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: black;
+    width: 100%;
+}
+
+section{
+    width: 80%;
+    height: 100vh;
+    background: #FFE000;
+background: -webkit-linear-gradient(to right, #799F0C, #FFE000);  
+background: linear-gradient(to right, #799F0C, #FFE000); 
+    margin: auto;
+    border: 1px solid rgb(238, 255, 0);
+    border-radius: 18px;
+    margin-top: 10%;
+}
+
+section .top-side{
+    width: 100%;
+    height: 30vh;
+    margin: auto;
+}
+
+.top-side .nameside{
+    text-align: center;
+}
+
+.top-side .nameside h2{
+    margin-top: 30px;
+}
+
+.top-side .nameside p{
+    margin-top: 10px;
+}
+
+section .main-side{
+    width: 100%;
+    margin-top: -95px;
+    margin-bottom: 50px;
+    position: relative;
+    background: var(--color-text);
+}
+
+.main-side h2{
+    background: linear-gradient(to right, #799F0C, #FFE000);
+    color: black;
+    padding: 10px 5px;
+    font-family: var(--font-main);
+}
+
+.main-side ul{
+    position: relative;
+    padding: 20px;
+}
+
+.main-side ul li{
+    position: relative;
+    list-style: none;
+    color: var(--main-color);
+    border: none;
+    border-bottom: 2px solid var(--sub-color);
+    padding: 15px 0;
+}
+
+.main-side li:last-child{
+    border-bottom: none;
+}
+
+.main-side ul li label{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--font-main);
+}
+
+.main-side li label input{
+    visibility: hidden;
+    appearance: none;
+}
+
+.main-side ul li label p{
+    position: absolute;
+}
+
+.main-side li label span{
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--sub-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-side ul li label span::before{
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 9px;
+    top: 6px;
+    border-left: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    transform: rotate(-40deg);
+}
+
+.main-side ul li label input:checked ~ p{
+    text-decoration: line-through;
+    color: var(--sub-color);
+}
+
+
+.main-side ul li label input:checked ~ span{
+    background: var(--sub-color);
+}
+
+.main-side ul li label input:checked ~ span::before{
+    border-left: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+}
+
+.add-task{
+    margin-bottom: 30px;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px 8px;
+    background-color: rgb(238, 255, 0);
+}
+
+.add-task p{
+    font-weight: 800;
+}
+
+
+
+
